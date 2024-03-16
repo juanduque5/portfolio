@@ -1,0 +1,13 @@
+canvas {
+  height: 500px;
+}
+
+.text-gradient {
+  background-image: linear-gradient(
+    135deg,
+    rgb(95, 44, 130) 0%,
+    rgb(73, 160, 157) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
