@@ -35,7 +35,7 @@ function Header() {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setShow(true);
-    }, 1000);
+    }, 600);
 
     return () => clearTimeout(timeoutId);
   }, []);
