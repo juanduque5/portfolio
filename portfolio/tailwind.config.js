@@ -5,6 +5,13 @@ export default {
     extend: {
       colors: {
         "secondary-color": "#49a09d",
+        custom: {
+          primary: "rgb(95, 44, 130)",
+          secondary: "rgb(73, 160, 157)",
+        },
+      },
+      height: {
+        "h-500": "500px",
       },
     },
   },
