@@ -42,21 +42,23 @@ function Header() {
 
   return (
     <div>
-      <div className="  w-3/4 m-auto flex justify-between  mt-2">
-        <div className="cursor-pointer">
-          <img className="" src={logo} alt=""></img>
-        </div>
-        <div className="w-auto flex gap-2 ">
-          <button className="w-32 border border-black font-mono text-lg font-semibold shadow-xl">
-            Contact
-          </button>
-          <button className="shadow-xl bg-custom-secondary to-custom-secondary w-32 bg-text-gradient   font-mono text-lg font-semibold text-white hover:border-none">
-            Projects
-          </button>
+      <div className="  w-full m-auto flex justify-between mt-2 mb-10">
+        <div className="w-3/4  flex justify-between m-auto">
+          <div className="cursor-pointer ">
+            <img className="" src={logo} alt=""></img>
+          </div>
+          <div className="w-auto flex gap-2 ">
+            <button className="w-32 border border-black font-mono text-lg font-semibold shadow-xl">
+              Resume
+            </button>
+            <button className="shadow-xl bg-custom-secondary to-custom-secondary w-32 bg-text-gradient   font-mono text-lg font-semibold text-white hover:border-none">
+              Projects
+            </button>
+          </div>
         </div>
       </div>
       <div>
-        <Canvas className="bg-white canvas mt-10">
+        <Canvas className="bg-white canvas mt-14">
           <ambientLight />
           <OrbitControls enableZoom={false} />
           <Suspense fallback={null}>
@@ -68,7 +70,7 @@ function Header() {
       </div>
       <div className="flex justify-center">
         {show ? (
-          <h1 className="font-mono text-6xl">
+          <h1 className="font-mono md:text-6xl text-4xl">
             Hi, my name is <span className="text-gradient">Juan Duque</span>
             <br />
             <Typewriter text="I'm a Software Developer." speed={70} />
@@ -83,8 +85,8 @@ function Header() {
       </div>
       {show ? (
         <div className="flex justify-center mt-14 w-auto gap-3">
-          <button className="hover:bg-custom-secondary border-b text-xl border-slate-300 w-32 h-12 hover:border-none hover:text-white font-semibold hover:shadow-md">
-            Resume
+          <button className="hover:bg-custom-secondary border-b text-2xl border-slate-300 w-32 h-12 hover:border-none hover:text-white  hover:shadow-md font-mono">
+            Contact
           </button>
         </div>
       ) : (

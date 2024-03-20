@@ -8,6 +8,7 @@ export default {
         custom: {
           primary: "rgb(95, 44, 130)",
           secondary: "rgb(73, 160, 157)",
+          customGray: "rgba(217, 217, 217, 0.2)",
         },
       },
       height: {
