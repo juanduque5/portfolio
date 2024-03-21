@@ -5,8 +5,8 @@ function About() {
       <div className="w-3/4  m-auto h-full flex flex-col">
         <div className=" flex h-14">
           {/* <div className="w-full "></div> */}
-          <div className="border-b w-11/12 m-auto">
-            <p className="text-white  font-semibold text-2xl font-mono text-center">
+          <div className=" w-11/12 m-auto">
+            <p className="text-white border-b  font-semibold text-2xl font-mono text-center">
               About
             </p>
           </div>
