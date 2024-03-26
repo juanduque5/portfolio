@@ -24,9 +24,9 @@ function Skills() {
       </div>
       <div className="m-auto w-11/12 flex flex-row md:flex-col h-full ">
         <div className="w-full  h-full  flex ">
-          <div className="m-auto border-b shadow-lg h-auto flex flex-col md:gap-0 gap-3 md:flex-row w-3/4">
+          <div className="m-auto border-b shadow-lg  h-auto flex flex-col md:gap-3 gap-3 md:flex-row w-3/4">
             <div className="w-full">
-              <div className="flex">
+              <div className="flex ">
                 <img className="w-auto h-auto m-auto" src={react} alt=""></img>
               </div>
               <div>
@@ -34,7 +34,7 @@ function Skills() {
               </div>
             </div>
             <div className="w-full">
-              <div className="flex">
+              <div className="flex ">
                 <img className="w-auto h-auto m-auto" src={vue} alt=""></img>
               </div>
               <div>
@@ -43,7 +43,7 @@ function Skills() {
             </div>
 
             <div className="w-full">
-              <div className="flex">
+              <div className="flex ">
                 <img
                   className="w-auto h-auto m-auto"
                   src={tailwind}
@@ -56,7 +56,7 @@ function Skills() {
             </div>
 
             <div className="w-full">
-              <div className="flex">
+              <div className="flex ">
                 <img className="w-auto h-auto m-auto" src={html} alt=""></img>
               </div>
               <div>
@@ -64,7 +64,7 @@ function Skills() {
               </div>
             </div>
             <div className="w-full">
-              <div className="flex">
+              <div className="flex ">
                 <img className="w-auto h-auto m-auto" src={css} alt=""></img>
               </div>
               <div>
@@ -72,7 +72,7 @@ function Skills() {
               </div>
             </div>
             <div className="w-full">
-              <div className="flex">
+              <div className="flex ">
                 <img className="w-auto h-auto m-auto" src={linux} alt=""></img>
               </div>
               <div>
@@ -80,7 +80,7 @@ function Skills() {
               </div>
             </div>
             <div className="w-full">
-              <div className="flex">
+              <div className="flex ">
                 <img className="w-auto h-auto m-auto" src={npm} alt=""></img>
               </div>
               <div>
@@ -88,7 +88,7 @@ function Skills() {
               </div>
             </div>
             <div className="w-full">
-              <div className="flex">
+              <div className="flex ">
                 <img className="w-auto h-auto m-auto" src={git} alt=""></img>
               </div>
               <div>
@@ -98,9 +98,9 @@ function Skills() {
           </div>
         </div>
         <div className="w-full  h-full m-auto flex">
-          <div className="m-auto h-auto border-b shadow-lg w-3/4 md:gap-0 gap-3 flex-col md:flex-row flex">
+          <div className="m-auto h-auto border-b shadow-lg w-3/4 md:gap-3 gap-3 flex-col md:flex-row flex">
             <div className="w-full">
-              <div className="flex">
+              <div className="flex ">
                 <img className="w-auto h-auto m-auto" src={python} alt=""></img>
               </div>
               <div>
@@ -108,7 +108,7 @@ function Skills() {
               </div>
             </div>
             <div className="w-full">
-              <div className="flex">
+              <div className="flex ">
                 <img className="w-auto h-auto m-auto" src={c} alt=""></img>
               </div>
               <div>
@@ -116,7 +116,7 @@ function Skills() {
               </div>
             </div>
             <div className="w-full">
-              <div className="flex">
+              <div className="flex ">
                 <img className="w-auto h-auto m-auto" src={java} alt=""></img>
               </div>
               <div>
@@ -124,7 +124,7 @@ function Skills() {
               </div>
             </div>
             <div className="w-full">
-              <div className="flex">
+              <div className="flex ">
                 <img className="w-auto h-auto m-auto" src={js} alt=""></img>
               </div>
               <div>
@@ -132,7 +132,7 @@ function Skills() {
               </div>
             </div>
             <div className="w-full">
-              <div className="flex">
+              <div className="flex ">
                 <img className="w-auto h-auto m-auto" src={node} alt=""></img>
               </div>
               <div>
@@ -140,7 +140,7 @@ function Skills() {
               </div>
             </div>
             <div className="w-full">
-              <div className="flex">
+              <div className="flex ">
                 <img className="w-auto h-auto m-auto" src={sql} alt=""></img>
               </div>
               <div>
@@ -148,7 +148,7 @@ function Skills() {
               </div>
             </div>
             <div className="w-full">
-              <div className="flex">
+              <div className="flex ">
                 <img
                   className="w-auto h-auto m-auto"
                   src={postgresql}
@@ -160,7 +160,7 @@ function Skills() {
               </div>
             </div>
             <div className="w-full">
-              <div className="flex">
+              <div className="flex ">
                 <img className="w-auto h-auto m-auto" src={mongo} alt=""></img>
               </div>
               <div>
