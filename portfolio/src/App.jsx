@@ -6,15 +6,26 @@ import Projects from "./Components/Projects/Projects";
 import Email from "./Components/Email/Email";
 
 function App() {
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById("projects");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToContact = () => {
+    const projectsSection = document.getElementById("contacts");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <>
-      <Header />
+      <Header onClick={scrollToProjects} onClick2={scrollToContact} />
       <About />
       <Skills />
       <Projects />
-      <div className=" bg-gradient-to-r from-custom-primary to-custom-secondary">
-        <Email />
-      </div>
+      <Email />
     </>
   );
 }

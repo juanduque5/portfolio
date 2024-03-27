@@ -1,12 +1,31 @@
 import linked from "../../../images/linkedin2.png";
 import git2 from "../../../images/github2.png";
+import { useEffect } from "react";
+import "./Email.css";
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("shu");
+    }
+  });
+});
 function Email() {
+  useEffect(() => {
+    const hiddenElements = document.querySelectorAll(".hid");
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    // Limpiar el observer cuando el componente se desmonta
+    return () => {
+      hiddenElements.forEach((el) => observer.unobserve(el));
+    };
+  }, []); // <- Esto asegura que
   return (
     <div className="">
-      <div className="relative flex items-top justify-center md:h-96 h-auto bg-white dark:bg-gray-900  sm:items-center sm:pt-0">
+      <div className="relative  flex items-top justify-center md:h-96 h-auto bg-white dark:bg-gray-900  sm:items-center sm:pt-0">
         <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
-          <div className="mt-8 overflow-hidden">
-            {/* dark:bg-gray-900 s */}
+          <div id="contacts" className="mt-8 overflow-hidden hid">
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="p-6 mr-2 bg-gray-100 dark:bg-gray-800 sm:rounded-lg">
                 <h1 className="text-4xl sm:text-5xl text-gray-800 dark:text-white font-extrabold tracking-tight">
@@ -18,10 +37,22 @@ function Email() {
 
                 <div className="flex items-center mt-8 text-gray-600 dark:text-gray-400">
                   <div className="cursor-pointer">
-                    <img src={linked} alt=""></img>
+                    <a
+                      href="https://www.linkedin.com/in/juan-duque-085905295"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={linked} alt="LinkedIn"></img>
+                    </a>
                   </div>
                   <div className="ml-4 text-md tracking-wide font-semibold w-40 cursor-pointer">
-                    <img src={git2} alt=""></img>
+                    <a
+                      href="https://github.com/juanduque5"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={git2} alt="GitHub"></img>
+                    </a>
                   </div>
                 </div>
 

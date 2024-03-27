@@ -29,7 +29,8 @@ const Typewriter = ({ text, speed }) => {
   return <span>{displayText}</span>;
 };
 
-function Header() {
+// eslint-disable-next-line react/prop-types
+function Header({ onClick, onClick2 }) {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -51,7 +52,10 @@ function Header() {
             <button className="w-32 border border-black font-mono text-lg font-semibold shadow-xl">
               Resume
             </button>
-            <button className="shadow-xl bg-custom-secondary to-custom-secondary w-32 bg-text-gradient   font-mono text-lg font-semibold text-white hover:border-none">
+            <button
+              onClick={onClick}
+              className="shadow-xl bg-custom-secondary to-custom-secondary w-32 bg-text-gradient   font-mono text-lg font-semibold text-white hover:border-none"
+            >
               Projects
             </button>
           </div>
@@ -85,7 +89,10 @@ function Header() {
       </div>
       {show ? (
         <div className="flex justify-center mt-14 w-auto gap-3">
-          <button className="hover:bg-custom-secondary border-b text-2xl border-slate-300 w-32 h-12 hover:border-none hover:text-white  hover:shadow-md font-mono">
+          <button
+            onClick={onClick2}
+            className="hover:bg-custom-secondary border-b text-2xl border-slate-300 w-32 h-12 hover:border-none hover:text-white  hover:shadow-md font-mono"
+          >
             Contact
           </button>
         </div>

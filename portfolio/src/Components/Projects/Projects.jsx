@@ -59,7 +59,7 @@ function Projects() {
   };
   return (
     <div className=" w-full h-auto bg-custom-customGray flex flex-col gap-10 ">
-      <div className="w-3/4 flex m-auto ">
+      <div id="projects" className="w-3/4 flex m-auto ">
         <p className="font-mono font-semibold text-2xl text-black m-auto">
           Projects
         </p>
@@ -87,20 +87,46 @@ function Projects() {
               <div className="h-1/4 break-words  flex">
                 <div className="m-auto  w-1/2 flex justify-center border-r">
                   <div>
-                    <img className="w-12 h-12" src={github} alt=""></img>
+                    <a
+                      href="https://github.com/juanduque5/g-ahora"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={github} alt="GitHub"></img>
+                    </a>
                   </div>
                   <div className="flex items-center ml-2">
                     <p className="text-custom-secondary font-semibold border-b">
-                      Front-End
+                      <a
+                        href="https://github.com/juanduque5/g-ahora"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Front-End
+                      </a>
                     </p>
                   </div>
                 </div>
                 <div className="m-auto  w-1/2 flex justify-center">
                   <div>
-                    <img className="w-12 h-12" src={github} alt=""></img>
+                    <a
+                      href="https://github.com/juanduque5/G-Back"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={github} alt="GitHub"></img>
+                    </a>
                   </div>
                   <div className="flex items-center ml-2">
-                    <p className=" font-semibold border-b ">Back-End</p>
+                    <p className=" font-semibold border-b ">
+                      <a
+                        href="https://github.com/juanduque5/G-Back"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Back-End
+                      </a>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -166,7 +192,13 @@ function Projects() {
               <div className="h-1/4 break-words  flex">
                 <div className="m-auto w-1/2 flex justify-center border-r">
                   <div>
-                    <img className="w-12 h-12" src={github} alt=""></img>
+                    <a
+                      href="https://github.com/juanduque5/DetectionSystem-Front"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={github} alt="GitHub"></img>
+                    </a>
                   </div>
                   <div className="flex items-center ml-2">
                     <p className="text-custom-secondary font-semibold border-b">
@@ -176,10 +208,25 @@ function Projects() {
                 </div>
                 <div className="m-auto w-1/2 flex justify-center">
                   <div>
-                    <img className="w-12 h-12" src={github} alt=""></img>
+                    <a
+                      href="https://github.com/juanduque5/DetectionSystem-BackEnd"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={github} alt="GitHub"></img>
+                    </a>
                   </div>
                   <div className="flex items-center ml-2">
-                    <p className=" font-medium border-b ">Back-End</p>
+                    <p className=" font-medium border-b ">
+                      <a
+                        href="https://github.com/juanduque5/DetectionSystem-BackEnd"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {" "}
+                        Back-End
+                      </a>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -245,20 +292,46 @@ function Projects() {
               <div className="h-1/4 break-words  flex">
                 <div className="m-auto  w-1/2 flex justify-center border-r">
                   <div>
-                    <img className="w-12 h-12" src={github} alt=""></img>
+                    <a
+                      href="https://github.com/juanduque5/UsedCars-FrontEnd"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={github} alt="GitHub"></img>
+                    </a>
                   </div>
                   <div className="flex items-center ml-2 ">
                     <p className="text-custom-secondary font-semibold border-b">
-                      Front-End
+                      <a
+                        href="https://github.com/juanduque5/UsedCars-FrontEnd"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Front-End
+                      </a>
                     </p>
                   </div>
                 </div>
                 <div className="m-auto w-1/2 flex justify-center">
                   <div>
-                    <img className="w-12 h-12 " src={github} alt=""></img>
+                    <a
+                      href="https://github.com/juanduque5/usedCars-BackEnd"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={github} alt="GitHub"></img>
+                    </a>
                   </div>
                   <div className="flex items-center ml-2">
-                    <p className=" font-semibold border-b ">Back-End</p>
+                    <p className=" font-semibold border-b ">
+                      <a
+                        href="https://github.com/juanduque5/usedCars-BackEnd"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Back-End
+                      </a>
+                    </p>
                   </div>
                 </div>
               </div>
