@@ -43,7 +43,7 @@ function Header() {
   return (
     <div>
       <div className="  w-full m-auto flex justify-between mt-2 mb-10">
-        <div className="w-3/4  flex justify-between m-auto">
+        <div className="md:w-3/4  w-96 flex justify-between m-auto">
           <div className="cursor-pointer ">
             <img className="" src={logo} alt=""></img>
           </div>
@@ -70,7 +70,7 @@ function Header() {
       </div>
       <div className="flex justify-center">
         {show ? (
-          <h1 className="font-mono md:text-6xl text-4xl">
+          <h1 className="font-mono md:text-6xl text-2xl">
             Hi, my name is <span className="text-gradient">Juan Duque</span>
             <br />
             <Typewriter text="I'm a Software Developer." speed={70} />

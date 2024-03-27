@@ -15,8 +15,27 @@ import git from "../../../images/git2.png";
 // import webgl from "../../../images/webgl.png";
 import npm from "../../../images/npm.png";
 import linux from "../../../images/linux.png";
+import { useEffect } from "react";
+import "./skills.css";
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
 
 function Skills() {
+  useEffect(() => {
+    const hiddenElements = document.querySelectorAll(".esconder");
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    // Limpiar el observer cuando el componente se desmonta
+    return () => {
+      hiddenElements.forEach((el) => observer.unobserve(el));
+    };
+  }, []); // <- Esto asegura que
   return (
     <div className="m-auto  w-3/4 md:h-96 h-auto flex flex-col mb-10 mt-10">
       <div className="m-auto md:mb-0 mb-4 mt-2 ">
@@ -24,7 +43,7 @@ function Skills() {
       </div>
       <div className="m-auto w-11/12 flex flex-row md:flex-col h-full ">
         <div className="w-full  h-full  flex ">
-          <div className="m-auto border-b shadow-lg  h-auto flex flex-col md:gap-3 gap-3 md:flex-row w-3/4">
+          <div className="m-auto border-b shadow-lg esconder h-auto flex flex-col md:gap-3 gap-3 md:flex-row w-3/4">
             <div className="w-full">
               <div className="flex ">
                 <img className="w-auto h-auto m-auto" src={react} alt=""></img>
@@ -98,7 +117,7 @@ function Skills() {
           </div>
         </div>
         <div className="w-full  h-full m-auto flex">
-          <div className="m-auto h-auto border-b shadow-lg w-3/4 md:gap-3 gap-3 flex-col md:flex-row flex">
+          <div className="m-auto esconder  h-auto border-b shadow-lg w-3/4 md:gap-3 gap-3 flex-col md:flex-row flex">
             <div className="w-full">
               <div className="flex ">
                 <img className="w-auto h-auto m-auto" src={python} alt=""></img>

@@ -26,28 +26,36 @@ export default function Modal({ open, close, gallery }) {
     <>
       <div className="overlay-modal">
         <div className="modal-content">
-          <button className=" ml-auto flex w-7 border" onClick={close}>
-            <p className="m-auto"> X</p>
-          </button>
-          <div className="h-full w-full flex items-center">
+          <div className="h-auto mb-2">
+            <button className=" ml-auto flex w-7 bg-red-500" onClick={close}>
+              <p className="m-auto text-white"> X</p>
+            </button>
+          </div>
+
+          <div className="h-full w-full flex items-center flex-col ">
+            <div className="mb-10">
+              <p className="font-mono font-semibold text-xl border-b ">
+                Gallery
+              </p>
+            </div>
             <button
-              className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black text-white p-2 rounded-xl"
+              className="absolute top-1/2 left-6 transform -translate-y-1/2 bg-black opacity-60 text-white h-12 w-12 rounded-xl"
               onClick={prevImage}
             >
               Prev
             </button>
             {/* Renderizar la imagen actual */}
             <img
-              className="h-5/6 w-full object-cover border"
+              className="h-5/6 w-full  object-fit "
               src={gallery[currentImageIndex]}
               alt={`Image ${currentImageIndex}`}
             />
             {/* Botón para mostrar la imagen siguiente */}
             <button
-              className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black text-white rounded-xl p-2"
+              className="absolute top-1/2 right-6 transform -translate-y-1/2  opacity-60 bg-black   rounded-xl h-12 w-12"
               onClick={nextImage}
             >
-              Next
+              <span className="relative  text-white opacity-100">Next</span>
             </button>
           </div>
         </div>

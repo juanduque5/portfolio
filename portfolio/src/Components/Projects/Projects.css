@@ -1,11 +1,11 @@
-.esconder {
+.esconder0 {
   opacity: 0;
   filter: blur(5px);
   transition: all 1s;
   transform: translateX(-100%);
 }
 
-.show {
+.show0 {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
