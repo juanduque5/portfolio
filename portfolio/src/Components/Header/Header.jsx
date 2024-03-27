@@ -49,9 +49,16 @@ function Header({ onClick, onClick2 }) {
             <img className="" src={logo} alt=""></img>
           </div>
           <div className="w-auto flex gap-2 ">
-            <button className="w-32 border border-black font-mono text-lg font-semibold shadow-xl">
-              Resume
-            </button>
+            <a
+              className="h-full"
+              href="https://docs.google.com/document/d/1fP6IRyrmBpkq8AuebQq0lIbizeer8D9v/edit?usp=sharing&ouid=113231530407850760535&rtpof=true&sd=true"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="w-32 border h-full border-black font-mono text-lg font-semibold shadow-xl">
+                Resume
+              </button>
+            </a>
             <button
               onClick={onClick}
               className="shadow-xl bg-custom-secondary to-custom-secondary w-32 bg-text-gradient   font-mono text-lg font-semibold text-white hover:border-none"

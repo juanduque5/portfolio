@@ -1,6 +1,7 @@
 import linked from "../../../images/linkedin2.png";
 import git2 from "../../../images/github2.png";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./Email.css";
 
 const observer = new IntersectionObserver((entries) => {
@@ -12,6 +13,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 function Email() {
+  const [sent, setSent] = useState("");
   useEffect(() => {
     const hiddenElements = document.querySelectorAll(".hid");
     hiddenElements.forEach((el) => observer.observe(el));
@@ -21,9 +23,31 @@ function Email() {
       hiddenElements.forEach((el) => observer.unobserve(el));
     };
   }, []); // <- Esto asegura que
+  ///////
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("", "", form.current, {
+        publicKey: "",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          setSent("Successfully sent.");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+  ////
   return (
     <div className="">
-      <div className="relative  flex items-top justify-center md:h-96 h-auto bg-white dark:bg-gray-900  sm:items-center sm:pt-0">
+      <div className="relative  flex items-top justify-center md:h-96 h-auto bg-gray-900  sm:items-center sm:pt-0">
         <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
           <div id="contacts" className="mt-8 overflow-hidden hid">
             <div className="grid grid-cols-1 md:grid-cols-2">
@@ -103,8 +127,10 @@ function Email() {
 
               <form
                 className="p-6 flex flex-col justify-center"
-                action="https://formsubmit.co/48ca77434e5f88ac82ec2e3a709d2b96"
-                method="POST"
+                // action="https://formsubmit.co/48ca77434e5f88ac82ec2e3a709d2b96"
+                // method="POST"
+                ref={form}
+                onSubmit={sendEmail}
               >
                 <div className="flex flex-col">
                   <label htmlFor="name" className="hidden">
@@ -114,11 +140,11 @@ function Email() {
                   <input type="hidden" name="_next" value="false" />
                   <input
                     type="name"
-                    name="name"
+                    name="user_name"
                     id="name"
                     placeholder="Full Name"
                     required
-                    className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-white font-semibold  focus:outline-none"
+                    className="w-100 mt-2 py-3 px-3 rounded-lg  bg-gray-800 border border-gray-400  text-white font-semibold  focus:outline-none"
                   />
                 </div>
 
@@ -128,11 +154,11 @@ function Email() {
                   </label>
                   <input
                     type="email"
-                    name="email"
+                    name="user_email"
                     id="email"
                     placeholder="Email"
                     required
-                    className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-white font-semibold focus:outline-none"
+                    className="w-100 mt-2 py-3 px-3 rounded-lg  bg-gray-800 border border-gray-400  text-white font-semibold focus:outline-none"
                   />
                 </div>
 
@@ -140,21 +166,26 @@ function Email() {
                   <label htmlFor="tel" className="hidden">
                     Number
                   </label>
-                  <input
-                    type="tel"
-                    name="tel"
-                    id="tel"
-                    placeholder="Telephone Number"
-                    className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-white font-semibold  focus:outline-none"
+                  <textarea
+                    name="message"
+                    placeholder="Message"
+                    className="w-100 mt-2 py-3 px-3 rounded-lg bg-gray-800 border border-gray-400  text-white font-semibold  focus:outline-none"
                   />
                 </div>
-
-                <button
-                  type="submit"
-                  className="md:w-32 bg-custom-secondary hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 "
-                >
-                  Submit
-                </button>
+                <div className="flex gap-5">
+                  <div>
+                    <button
+                      type="submit"
+                      value="Send"
+                      className="md:w-32 bg-custom-secondary hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 "
+                    >
+                      Submit
+                    </button>
+                  </div>
+                  <div className="text-green-400 flex items-center py-6">
+                    {sent}
+                  </div>
+                </div>
               </form>
             </div>
           </div>

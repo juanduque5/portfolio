@@ -66,15 +66,15 @@ function Projects() {
       </div>
       <div className="w-3/4  m-auto h-full flex esconder0">
         <div className="md:w-3/4 w-full flex m-auto">
-          <div className="w-full xl:h-72 lg:h-auto md:h-auto h-auto shadow-xl  flex md:flex-row  flex-col  ">
-            <div className="md:w-1/2 flex flex-col  w-full ">
+          <div className="w-full xl:h-72 lg:h-auto md:h-auto h-auto shadow-2xl  flex md:flex-row  flex-col  ">
+            <div className="md:w-1/2 flex flex-col  w-full bg-slate-50 ">
               <div className="h-1/4 flex items-center">
                 <p className="font-mono font-semibold m-auto text-lg text-gradient border-b">
                   Real state app
                 </p>
               </div>
               <div className="h-auto lg:h-1/2 ">
-                <p className="font-mono text-md h-auto w-auto ">
+                <p className="font-mono text-md h-auto w-auto font-medium">
                   Our real estate app is a comprehensive platform built using
                   React for the frontend, Node.js for the backend, and
                   PostgreSQL for the database. It offers users a seamless
@@ -172,8 +172,8 @@ function Projects() {
       </div>
       <div className="w-3/4  m-auto h-full  flex  esconder0 ">
         <div className="md:w-3/4 w-full  flex m-auto">
-          <div className="w-full xl:h-72 lg:h-auto md:h-auto h-auto shadow-xl  flex md:flex-row  flex-col  ">
-            <div className="md:w-1/2 flex flex-col  w-full ">
+          <div className="w-full xl:h-72 lg:h-auto md:h-auto h-auto shadow-2xl  flex md:flex-row  flex-col  ">
+            <div className="md:w-1/2 flex flex-col  w-full bg-slate-50">
               <div className="h-1/4   flex items-center  ">
                 <p className="font-mono font-semibold m-auto text-lg text-gradient border-b ">
                   Accessories Detection System App
@@ -272,14 +272,14 @@ function Projects() {
       </div>
       <div className="w-3/4  m-auto h-full  flex esconder0  mb-8">
         <div className="md:w-3/4 w-full  flex m-auto">
-          <div className="w-full xl:h-72 lg:h-auto md:h-auto h-auto shadow-xl  flex md:flex-row  flex-col ">
+          <div className="w-full xl:h-72 lg:h-auto md:h-auto h-auto shadow-2xl  flex md:flex-row  flex-col  bg-slate-50">
             <div className="md:w-1/2 flex flex-col  w-full">
               <div className="h-1/4  flex items-center ">
                 <p className="font-mono font-semibold m-auto text-lg border-b text-gradient">
                   Used Cars app
                 </p>
               </div>
-              <div className="h-auto lg:h-1/2">
+              <div className="h-auto lg:h-1/2 ">
                 <p className="font-mono text-md h-auto w-auto  ">
                   This application serves as a platform for sharing used cars,
                   empowering users to list their vehicles for sale while
